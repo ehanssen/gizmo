@@ -7,4 +7,4 @@ A little tool to help read angles from ultramicrotomes. Works with https://githu
 # Cite
 
 Eric Hanssen and Phil Francis, Ian Holmes Imaging Centre, Bio21 Institute, the University of Melbourne.
-doi:10.5281/zenodo.8223274
+[doi:10.5281/zenodo.8223274](https://doi.org/10.5281/zenodo.8223274)
