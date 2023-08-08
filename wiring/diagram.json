@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-mini", "id": "bb1", "top": 65.8, "left": 477.6, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -171.18, "left": 303.47, "attrs": {} },
+    { "type": "wokwi-mpu6050", "id": "imu1", "top": 196.54, "left": 245.16, "attrs": {} },
+    { "type": "wokwi-mpu6050", "id": "imu2", "top": 197.11, "left": 346.64, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -7.48,
+      "left": 625.59,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 217.32,
+      "left": 553.72,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "uno:3.3V", "bb1:1t.a", "gray", [ "v30.82", "h36.13" ] ],
+    [ "uno:5V", "bb1:2t.a", "red", [ "v23.19", "h35.73" ] ],
+    [ "uno:GND.2", "bb1:3t.a", "black", [ "v16.96", "h36.47", "v39.52" ] ],
+    [ "uno:A4", "bb1:4t.a", "orange", [ "v17.65", "h-31.07" ] ],
+    [ "uno:A5", "bb1:5t.a", "gold", [ "v25.96", "h-30.97" ] ],
+    [ "bb1:3t.e", "lcd1:GND", "black", [ "v0" ] ],
+    [ "bb1:2t.e", "lcd1:VCC", "red", [ "v0" ] ],
+    [ "bb1:4t.e", "lcd1:SDA", "orange", [ "v0" ] ],
+    [ "bb1:5t.e", "lcd1:SCL", "gold", [ "v0" ] ],
+    [ "bb1:1t.b", "imu1:AD0", "gray", [ "h-228.64", "v115.92" ] ],
+    [ "bb1:2t.b", "imu1:VCC", "red", [ "v2.27", "h-179.64" ] ],
+    [ "bb1:3t.b", "imu1:GND", "black", [ "v3.98", "h-198.84" ] ],
+    [ "bb1:4t.b", "imu1:SDA", "orange", [ "v5.69", "h-227.64" ] ],
+    [ "bb1:5t.c", "imu2:SCL", "gold", [ "v9.42", "h-116.52" ] ],
+    [ "bb1:4t.c", "imu2:SDA", "orange", [ "v7.3", "h-116.52" ] ],
+    [ "bb1:3t.c", "imu2:GND", "black", [ "v4.47", "h-87.72" ] ],
+    [ "bb1:2t.c", "imu2:VCC", "red", [ "v2.35", "h-68.52" ] ],
+    [ "bb1:5t.b", "imu1:SCL", "gold", [ "v8.41", "h-227.64" ] ],
+    [ "btn1:2.l", "bb1:3t.d", "black", [ "v82.47", "h-116.79" ] ],
+    [ "uno:4", "btn1:1.l", "black", [ "v-15.8", "h74.75", "v183.5" ] ]
+  ],
+  "dependencies": {}
+}
