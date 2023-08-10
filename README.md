@@ -1,6 +1,4 @@
 # Gizmo
-
-
 A little tool to help read angles from ultramicrotomes. Works with https://github.com/automated-ultramicrotomy/crosshair
 
 # Manual
@@ -12,8 +10,9 @@ A little tool to help read angles from ultramicrotomes. Works with https://githu
 - All ROT, TLT and KNF drift a little overtime so make sure you add the offset more than the pure values
   (eg initial ROT was 4 degres, CrossHair ask for 6 degres but the original value of Gizmo slowly drifted to 4.6 degres while doing alignement and crosshair set up so set 6.6 degres) 
 
-
 # Cite
-
 Eric Hanssen and Phil Francis, Ian Holmes Imaging Centre, Bio21 Institute, the University of Melbourne.
 [doi:10.5281/zenodo.8223274](https://doi.org/10.5281/zenodo.8223274)
+
+# Note
+Depending on your MPU6050 (and mainly where you get them from) you will likely have different readings. It is worth purchasing a few sensors and trying them all. Out of 6 sensors we origialy bought 2 where not working as they should and one was a not reliable.
